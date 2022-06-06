@@ -53,23 +53,55 @@
 
 # Largest Product
 
-def bubble_s(nums)
-  nums.length.times do
-    i = 0
-    (nums.length - 1).times do
-      if nums[i] > nums[i+1]
-        holder = nums[i]
-        nums[i] = nums[i + 1]
-        nums[i + 1] = holder
-      end
-      i += 1
-    end
-  end
+# def bubble_s(nums)
+#   nums.length.times do
+#     i = 0
+#     (nums.length - 1).times do
+#       if nums[i] > nums[i+1]
+#         holder = nums[i]
+#         nums[i] = nums[i + 1]
+#         nums[i + 1] = holder
+#       end
+#       i += 1
+#     end
+#   end
 
-    p nums[-1]
-    p nums[-2]
+#     p nums[-1]
+#     p nums[-2]
   
 
-end
+# end
 
-bubble_s([5, -2, 1, -9, -7, 2, 6])
+# bubble_s([5, -2, 1, -9, -7, 2, 6])
+
+# Given an array of numbers, return a new array containing just two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
+
+# Specifically use nested loops to solve this exercise even though there are other approaches as well.
+
+# Input: [2, 5, 3, 1, 0, 7, 11]
+# Output: [3, 7]
+
+# Input: [1, 2, 3, 4, 5]
+# Output: false (While 1, 2, 3, and 4 altogether add up to 10, we're seeking just one pair of numbers.)
+
+# Two Sum I
+
+# def array(nums)
+#   new_array = []
+#   nums.length.times do
+#     i = 0
+#     nums.length.times do
+#       f = 0
+#       if nums[i] + nums[f] == 10
+#       new_array << nums[i]
+#       new_array << nums[f]
+#       end
+#       f += 1
+#     end
+#     i += 1
+#   end
+#   p new_array
+    
+# end
+
+# array([2, 5, 3, 1, 0, 7, 11])
