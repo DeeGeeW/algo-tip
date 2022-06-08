@@ -86,22 +86,24 @@
 
 # Two Sum I
 
-# def array(nums)
-#   new_array = []
-#   nums.length.times do
-#     i = 0
-#     nums.length.times do
-#       f = 0
-#       if nums[i] + nums[f] == 10
-#       new_array << nums[i]
-#       new_array << nums[f]
-#       end
-#       f += 1
-#     end
-#     i += 1
-#   end
-#   p new_array
+def array(nums)
+  new_array = []
+  i = 0
+  nums.length.times do
+    f = 0
+    nums.length.times do
+      if nums[i] + nums[f] == 10
+        new_array << nums[i]
+        new_array << nums[f]
+      end
+      f += 1
+    end
+    i += 1
     
-# end
+  end
+  
+  p new_array
+    
+end
 
-# array([2, 5, 3, 1, 0, 7, 11])
+array([2, 5, 3, 1, 0, 7, 11])
