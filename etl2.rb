@@ -33,15 +33,15 @@
 
 # Input:
 
-# {
-# 1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
-# 2 => ["D", "G"],
-# 3 => ["B", "C", "M", "P"],
-# 4 => ["F", "H", "V", "W", "Y"],
-# 5 => ["K"],
-# 8 => ["J", "X"],
-# 10 => ["Q", "Z"]
-# }
+{
+1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+2 => ["D", "G"],
+3 => ["B", "C", "M", "P"],
+4 => ["F", "H", "V", "W", "Y"],
+5 => ["K"],
+8 => ["J", "X"],
+10 => ["Q", "Z"]
+}
 
 # Output:
 
@@ -79,7 +79,9 @@ def convert_hash(hash)
   hash.each do |k,v|
     i = 0
     while i < v.length
-      new_hash[k] = v[i]
+      key = v[i].downcase
+      value = 1
+      new_hash[key] = value
       i += 1
     end
   end
@@ -88,6 +90,12 @@ def convert_hash(hash)
 end
 
 convert_hash({
-  1 => ["A", "E", "I", "O", "U"]
+  1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+  2 => ["D", "G"],
+  3 => ["B", "C", "M", "P"],
+  4 => ["F", "H", "V", "W", "Y"],
+  5 => ["K"],
+  8 => ["J", "X"],
+  10 => ["Q", "Z"]
   }
   )

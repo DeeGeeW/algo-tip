@@ -26,7 +26,7 @@ def convert_name(posts)
   i = 0
   user_num = {}
   while i < posts.length
-    user_num.posts = user_num[posts[i][:submitted_by]]
+    user_num[posts] = user_num[posts[i][:submitted_by]]
     p user_num
     i += 1
   end
