@@ -6,10 +6,11 @@
 
 # Explanation: If someone would order one of everything on the menu, they'd pay a total of 14 (the sum of all the hash's values).
 
-def most_spent(hash)
-  i = 0
-  total = hash["hot dog"] + hash["hamburger"] + hash["steak sandwich"] + hash["fries"] + hash["cole slaw"] + hash["soda"]
-  p total
+def yummy(hash)
+  total = 0
+  hash.map do |key, value|
+    total += value
+  end
+  return total
 end
-
-most_spent({"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2})
+p yummy({"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2})

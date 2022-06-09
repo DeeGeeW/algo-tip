@@ -93,8 +93,11 @@ def array(nums)
     f = 0
     nums.length.times do
       if nums[i] + nums[f] == 10
+        if nums[i] != nums[f]
         new_array << nums[i]
         new_array << nums[f]
+        end
+        
       end
       f += 1
     end
@@ -102,8 +105,9 @@ def array(nums)
     
   end
   
-  p new_array
+  return new_array
     
 end
 
-array([2, 5, 3, 1, 0, 7, 11])
+
+p array([2, 5, 3, 1, 0, 7, 11])
