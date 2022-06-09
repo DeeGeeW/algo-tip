@@ -30,7 +30,31 @@ def rna_trans(string)
     i += 1
   end
   p trans
-
 end
 
-rna_trans("'ACGTGGTCTTAA'")
+rna_trans("ACGTGGTCTTAA")
+
+def transform(string)
+  hash = {}
+  new_string = ""
+  index = 0
+  while index < string.length
+    key = string[index]
+    if key == "A"
+      value = "U"
+      new_string << value
+    elsif key == "C"
+      value = "G"
+      new_string << value
+    elsif key == "G"
+      value = "C"
+      new_string << value
+    else value = "A"
+      new_string << value
+    end
+      hash[key] = value
+    index += 1
+  end
+  return new_string
+end
+p transform("ACGTGGTCTTAA")
